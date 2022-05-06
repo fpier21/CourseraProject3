@@ -26,7 +26,7 @@ mer_data <- rbind(test,train)
 #making unique features' names
 features_names <- make.names(features[,2], unique = T)
 
-mean_std_dataset <- total_data[,grepl('mean()', features_names) | grepl('std()', features_names)]
+mean_std_dataset <- mer_data[,grepl('mean()', features_names) | grepl('std()', features_names)]
 
 # descriptive activity names
 
