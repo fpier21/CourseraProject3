@@ -3,17 +3,31 @@
 
 library(dplyr)
 
+#download files 
+
+filename <- "Coureproject.zip"
+
+# Checking if archieve already exists.
+if (!file.exists(filename)){
+        fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+        download.file(fileURL, filename, method="curl")
+}  
+
+# Checking if folder exists
+if (!file.exists("UCI HAR Dataset")) { 
+        unzip(filename) 
+}
+
 # importing files 
 
-test <- read.table('X_test.txt', sep= '')
-test_labels <- read.table('y_test.txt', sep ='', col.names = 'activity')
-train <- read.table('X_train.txt', sep = '')
-train_labels <- read.table('y_train.txt', sep = '', col.names = 'activity')
-conversion <- read.table('activity_labels.txt', sep = '')
-features <- read.table('features.txt', sep = '')
-subject_train <- read.table('subject_train.txt', sep ='', col.names = 'subject')
-subject_test <- read.table('subject_test.txt', sep ='', col.names = 'subject')
-
+test <- read.table('UCI HAR Dataset/test/X_test.txt', sep= '')
+test_labels <- read.table('UCI HAR Dataset/test/y_test.txt', sep ='', col.names = 'activity')
+train <- read.table('UCI HAR Dataset/train/X_train.txt', sep = '')
+train_labels <- read.table('UCI HAR Dataset/train/y_train.txt', sep = '', col.names = 'activity')
+conversion <- read.table('UCI HAR Dataset/activity_labels.txt', sep = '')
+features <- read.table('UCI HAR Dataset/features.txt', sep = '')
+subject_train <- read.table('UCI HAR Dataset/train/subject_train.txt', sep ='', col.names = 'subject')
+subject_test <- read.table('UCI HAR Dataset/test/subject_test.txt', sep ='', col.names = 'subject')
 # merging the data sets
 
 test <- cbind(test,test_labels,subject_test)
