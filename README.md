@@ -1,6 +1,6 @@
 # CourseraProject3
 README for the Course Project of course Getting and Cleaning the Data. 
-In the repo there are two files: *run_analysis.R* and *Codebook*
+In the repo there are two files: *run_analysis.R* and *Codebook.md*
 
 The script *run_analysis.R* follows the indications for the project as described by professors. In particular it: 
 - Merges the training and the test sets to create one data set.
@@ -9,4 +9,4 @@ The script *run_analysis.R* follows the indications for the project as described
 - Appropriately labels the data set with descriptive variable names. 
 - From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
-The markdown file *Codebook* is the codebook of the project: it describes the variables and transformations performed in the script *run_analysis.R*
+The markdown file *Codebook.md* is the codebook of the project: it describes the variables and transformations performed in the script *run_analysis.R*
