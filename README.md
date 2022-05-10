@@ -7,6 +7,6 @@ The script *run_analysis.R* follows the indications for the project as described
 - Extracts only the measurements on the mean and standard deviation for each measurement. 
 - Uses descriptive activity names to name the activities in the data set
 - Appropriately labels the data set with descriptive variable names. 
-- From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+- From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. Finally, it outputs a txt file *tidy_data_set.txt* containing the table. 
 
 The markdown file *Codebook.md* is the codebook of the project: it describes the variables and transformations performed in the script *run_analysis.R*
